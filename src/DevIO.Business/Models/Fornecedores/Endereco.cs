@@ -11,5 +11,8 @@ namespace DevIO.Business.Models.Fornecedores
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+
+        /* EF Relations */ //Feito para que o Entity lembre que o endereço trabalhe com o Fornecedor
+        public Fornecedor Fornecedor { get; set; }
     }
 }
