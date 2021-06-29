@@ -15,7 +15,7 @@ namespace DevIO.Business.Models.Produtos
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
 
-        /* EF Relations */ //Feito para que o Entity lembre que o endereço trabalhe com o Fornecedor
+        /* EF Relations */ //Feito para que o Entity lembre que o produto trabalhe com o Fornecedor
         public Fornecedor Fornecedor { get; set; }
     }
 }
