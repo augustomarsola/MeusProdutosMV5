@@ -8,7 +8,7 @@ namespace DevIO.Infra.Data.Content
 {
     public class MeuDbContext : DbContext
     {
-        public MeuDbContext() : base(nameOrConnectionString: "DefaultConnection")
+        public MeuDbContext() : base("DefaultConnection")
         {
             //Desativando essas duas propriedades garantimos uma melhor perfomance da nossa aplicação
             Configuration.ProxyCreationEnabled = false;
@@ -16,7 +16,7 @@ namespace DevIO.Infra.Data.Content
         }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
-        public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<Fornecedor> Fornecedores { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
