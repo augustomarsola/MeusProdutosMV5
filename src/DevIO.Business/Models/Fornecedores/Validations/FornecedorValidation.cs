@@ -10,7 +10,7 @@ namespace DevIO.Business.Models.Fornecedores.Validations
             RuleFor(f => f.Nome)
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
                 .Length(2, 100)
-                .WithMessage("O campo {PropertyName} precisa ter entre {MinLenght} e {MaxLength} caracteres");
+                .WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
 
             When(f => f.TipoFornecedor == TipoFornecedor.PessoaFisica, () =>
             {
